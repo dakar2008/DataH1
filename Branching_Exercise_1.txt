@@ -1,0 +1,21 @@
+**** FIL STRUKTUR ****
+Vi ønsker så vidt som muligt at beholde filstrukturen som er i de enkelte projekt typer.
+Alt logisk kode skal ligge i en fil i projektet. Dette er den mest almindelige måde at arbejde med.
+
+**** ÈT ELLER FLERE REPOS ****
+Vi ønsker at bruge ét repo til hvert projekt.
+Dette er den mest almindelige måde at arbejde med.
+
+**** ADGANGSKONTROL ****
+Vi ønsker at bruge adgangskontrol for at sikre at koden ikke kan ændres uden at vi har en god grund.
+Dette er den mest almindelige måde at arbejde med.
+
+**** STRUKTUR I FILER - NAVNGIVNING AF FILER ****
+Navngivning af filer skal være enkle og tydelige.
+Det er vigtigt at filnavnet ikke er forstyrrende eller forvirrende.
+Filnavne skal være på engelsk.
+
+**** STRUKTUR I FILER - KOMMENTAR I KODE ****
+Kommentar i kode skal som udgangspunkt undgås, koden skal kunne forklare sig selv.
+
+**** STRUKTUR I FILER - NAVNGIVNING AF VARIABLER OG METODER ****
