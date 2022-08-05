@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Text.Json;
 
 namespace lommeregner
@@ -44,7 +44,7 @@ namespace lommeregner
 
         private void EqualBtn_Click(object sender, EventArgs e)
         {
-            string[] numbers = Display.Text.Split(' ');
+            string[] numbers = Display.Text.Replace("π", Math.PI.ToString().Replace(",", ".")).Split(' ');
             double result = 0;
             try
             {
@@ -57,24 +57,16 @@ namespace lommeregner
                             if (double.Parse(numbers[i - 1]) == 0 || double.Parse(numbers[i + 1]) == 0)
                             {
                                 numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
-                                i--;
-                                numbers = numbers.Where((source, index) => index != i).ToArray();
-                                i--;
-                                numbers[i + 1] = "0";
+                                numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
+                                numbers[i - 1] = "0";
                             }
                             else
                             {
-                                Debug.WriteLine(JsonSerializer.Serialize(numbers));
-                                Debug.WriteLine(double.Parse(numbers[i - 1].Replace('.', ',')) + " * " + double.Parse(numbers[i + 1].Replace('.', ',')));
-
                                 double calc = double.Parse(numbers[i - 1].Replace('.', ',')) * double.Parse(numbers[i + 1].Replace('.', ','));
                                 numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
-                                i--;
-                                numbers = numbers.Where((source, index) => index != i).ToArray();
-                                i--;
-                                numbers[i + 1] = calc.ToString();
+                                numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
+                                numbers[i - 1] = calc.ToString();
 
-                                Debug.WriteLine(JsonSerializer.Serialize(numbers));
                             }
                         }
                         else if (numbers[i] == "/")
@@ -86,19 +78,11 @@ namespace lommeregner
                                 return;
                             }
 
-                            Debug.WriteLine(JsonSerializer.Serialize(numbers));
-
-
-                            Debug.WriteLine(double.Parse(numbers[i - 1].Replace('.', ',')) + " / " + double.Parse(numbers[i + 1].Replace('.', ',')));
-
                             double calc = double.Parse(numbers[i - 1].Replace('.', ',')) / double.Parse(numbers[i + 1].Replace('.', ','));
                             numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
-                            i--;
-                            numbers = numbers.Where((source, index) => index != i).ToArray();
-                            i--;
-                            numbers[i + 1] = calc.ToString();
+                            numbers = numbers.Where((source, index) => index != (i - 1)).ToArray();
+                            numbers[i - 1] = calc.ToString();
 
-                            Debug.WriteLine(JsonSerializer.Serialize(numbers));
                         }
                     }
                 }
@@ -349,7 +333,7 @@ namespace lommeregner
 
         private void PiBtn_Click(object sender, EventArgs e)
         {
-            Display.Text = Display.Text + Math.PI.ToString().Replace(",", ".");
+            Display.Text = Display.Text + "π";
             Display.Focus();
         }
 
