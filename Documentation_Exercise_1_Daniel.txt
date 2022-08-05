@@ -1,0 +1,9 @@
+• Hvad er formålet med dokumentation?
+	Formålet med dokumentation er at beskrive hvad der sker, hvordan det sker, og hvordan det gør.
+	Det giver samtidig andre bedre mulighed for at kunne arbejde videre på det.
+	Det er også en god måde at få feedback fra andre.
+• Hvordan vil i grube det an hvis i skulle beskrive et program og begrunde jeres valg?
+	Jeg ville nok skrive det ned i et word dokument, og formatere dokumentet således at det er korrekt opstillet.
+• Hvilke værktøjer vil i bruge
+	Jeg vil som regel bruge word til at skrive dokumentation.
+	til mindre projekter kan dokumentationen også skrives i en README fil i projektets mappe.

@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Daniel", "Daniel", "{5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}"
 	ProjectSection(SolutionItems) = preProject
 		Branch_Exercise_5_Daniel.txt = Branch_Exercise_5_Daniel.txt
+		Documentation_Exercise_1_Daniel.txt = Documentation_Exercise_1_Daniel.txt
 	EndProjectSection
 EndProject
 Global
