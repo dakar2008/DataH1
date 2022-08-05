@@ -7,3 +7,8 @@
 • Pi
 • Kvadratrod
 ---------------------------------------------------------------------
+#Udregning/parsing af data
+Først erstatter vi Pi med verdien af Pi, derefter deler vi tal og symboler op i et object.
+Nu kikker vi så objected igemmen og erstatter gange og divisions stykker med deres udregnede verdi,
+herefter (trakker/ligger) vi tallende sammen og så har vi vores resultat.
+---------------------------------------------------------------------
