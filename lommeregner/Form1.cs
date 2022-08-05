@@ -507,5 +507,10 @@ namespace lommeregner
                 e.Handled = true;
             }
         }
+
+        private void PiBtn_Click(object sender, EventArgs e)
+        {
+            Display.Text = Math.PI.ToString().Replace(",", ".");
+        }
     }
 }
