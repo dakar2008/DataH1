@@ -19,3 +19,19 @@ Filnavne skal være på engelsk.
 Kommentar i kode skal som udgangspunkt undgås, koden skal kunne forklare sig selv.
 
 **** STRUKTUR I FILER - NAVNGIVNING AF VARIABLER OG METODER ****
+Navngivning af variabler og metoder skal være enkle og tydelige.
+Det er vigtigt at variablen ikke er forstyrrende eller forvirrende.
+Variablen skal være på engelsk.
+Metoden skal være på engelsk.
+
+**** HVAD SKAL DER BESKRIVES I COMMIT BESKEDER ****
+Commit beskeder skal beskrive hvad der er gjort.
+Commit beskeder skal være på engelsk.
+
+**** HVAD ER GRUNDEN TIL AT VI VIL BRANCHE ****
+Grunden til at vi vil branche er at vi ønsker at arbejde på en kodeversion, som er en del af en samling af kodeversioner.
+Og samtidig at kunne teste nye features eller bug fixes. Inden vi benytter den i master.
+
+**** HVORDAN VIL VI LAVE CODE REVIEW ****
+Code review er en måde at se på kode, og se om det er korrekt.
+Vi vil sætte os sammen og gennemgå koden for at se om den overholder vores krav.
