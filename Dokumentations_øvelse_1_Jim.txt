@@ -1,0 +1,11 @@
+Hvad betyder det at dokumentere? Ud fra jeres intuition beskriv
+
+    Hvad er formålet med dokumentation?
+        Formaalet er at give andre mulighed for at se hvordan tingende virker,
+        eller for at man selv kan se det, hvis man ikke selv har kikket paa det i et godt stykke tid.
+
+    Hvordan vil I gribe det an hvis i skulle beskrive et program og begrunde jeres valg?
+        jeg ville fortaelle om hvad det kan og gor og hvad det depender paa, og hvordan det er implateret.
+
+    Hvilke værktøjer vil I bruge
+        markdown, word etc.
