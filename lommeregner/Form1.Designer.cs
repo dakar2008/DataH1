@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Display = new System.Windows.Forms.TextBox();
             this.History = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ClearHistoryBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.Subtract_Btn = new System.Windows.Forms.Button();
             this.Multiply_Btn = new System.Windows.Forms.Button();
             this.Divide_Btn = new System.Windows.Forms.Button();
@@ -50,8 +52,7 @@
             this.Decimal_Btn = new System.Windows.Forms.Button();
             this.Delete_Btn = new System.Windows.Forms.Button();
             this.PiBtn = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ClearHistoryBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.SquareRootBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +82,21 @@
             this.History.TabStop = false;
             this.History.Text = "";
             this.History.KeyDown += new System.Windows.Forms.KeyEventHandler(this.History_KeyDown);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClearHistoryBtn});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 26);
+            // 
+            // ClearHistoryBtn
+            // 
+            this.ClearHistoryBtn.Name = "ClearHistoryBtn";
+            this.ClearHistoryBtn.Size = new System.Drawing.Size(158, 22);
+            this.ClearHistoryBtn.Text = "Clear History";
+            this.ClearHistoryBtn.Click += new System.EventHandler(this.ClearHistoryBtn_Click);
             // 
             // Subtract_Btn
             // 
@@ -131,7 +147,7 @@
             this.EqualBtn.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EqualBtn.Location = new System.Drawing.Point(244, 273);
             this.EqualBtn.Name = "EqualBtn";
-            this.EqualBtn.Size = new System.Drawing.Size(237, 53);
+            this.EqualBtn.Size = new System.Drawing.Size(156, 53);
             this.EqualBtn.TabIndex = 6;
             this.EqualBtn.Text = "=";
             this.EqualBtn.UseVisualStyleBackColor = true;
@@ -250,7 +266,7 @@
             // Decimal_Btn
             // 
             this.Decimal_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Decimal_Btn.Location = new System.Drawing.Point(406, 214);
+            this.Decimal_Btn.Location = new System.Drawing.Point(325, 214);
             this.Decimal_Btn.Name = "Decimal_Btn";
             this.Decimal_Btn.Size = new System.Drawing.Size(75, 53);
             this.Decimal_Btn.TabIndex = 18;
@@ -273,33 +289,30 @@
             // 
             this.PiBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PiBtn.Image = global::lommeregner.Properties.Resources.Apps_preferences_kcalc_constants_icon;
-            this.PiBtn.Location = new System.Drawing.Point(325, 214);
+            this.PiBtn.Location = new System.Drawing.Point(406, 273);
             this.PiBtn.Name = "PiBtn";
             this.PiBtn.Size = new System.Drawing.Size(75, 53);
             this.PiBtn.TabIndex = 20;
             this.PiBtn.UseVisualStyleBackColor = true;
             this.PiBtn.Click += new System.EventHandler(this.PiBtn_Click);
             // 
-            // contextMenuStrip1
+            // SquareRootBtn
             // 
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ClearHistoryBtn});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // ClearHistoryBtn
-            // 
-            this.ClearHistoryBtn.Name = "ClearHistoryBtn";
-            this.ClearHistoryBtn.Size = new System.Drawing.Size(180, 22);
-            this.ClearHistoryBtn.Text = "Clear History";
-            this.ClearHistoryBtn.Click += new System.EventHandler(this.ClearHistoryBtn_Click);
+            this.SquareRootBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SquareRootBtn.Image = ((System.Drawing.Image)(resources.GetObject("SquareRootBtn.Image")));
+            this.SquareRootBtn.Location = new System.Drawing.Point(406, 214);
+            this.SquareRootBtn.Name = "SquareRootBtn";
+            this.SquareRootBtn.Size = new System.Drawing.Size(75, 53);
+            this.SquareRootBtn.TabIndex = 21;
+            this.SquareRootBtn.UseVisualStyleBackColor = true;
+            this.SquareRootBtn.Click += new System.EventHandler(this.SquareRootBtn_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 332);
+            this.Controls.Add(this.SquareRootBtn);
             this.Controls.Add(this.PiBtn);
             this.Controls.Add(this.Delete_Btn);
             this.Controls.Add(this.Decimal_Btn);
@@ -355,5 +368,6 @@
         private Button PiBtn;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem ClearHistoryBtn;
+        private Button SquareRootBtn;
     }
 }

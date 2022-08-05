@@ -339,5 +339,14 @@
         {
             History.Clear();
         }
+
+        private void SquareRootBtn_Click(object sender, EventArgs e)
+        {
+            if(Display.Text.Length > 0)
+            {
+                History.Text = History.Text + "√ (" + Display.Text + ")\n";
+                Display.Text = Math.Sqrt(Convert.ToDouble(Display.Text)).ToString();
+            }
+        }
     }
 }
