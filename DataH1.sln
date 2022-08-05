@@ -11,6 +11,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lommeregner", "lommeregner\lommeregner.csproj", "{030395E8-AB1C-468B-AEEF-028081401C31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jim", "Jim", "{D5081C23-CF09-4E91-9AF2-0C35D217B4D6}"
+	ProjectSection(SolutionItems) = preProject
+		Branch_Exercise_5_Jim.txt = Branch_Exercise_5_Jim.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Daniel", "Daniel", "{5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}"
 	ProjectSection(SolutionItems) = preProject
