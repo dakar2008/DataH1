@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Display = new System.Windows.Forms.TextBox();
             this.History = new System.Windows.Forms.RichTextBox();
@@ -49,6 +50,9 @@
             this.Decimal_Btn = new System.Windows.Forms.Button();
             this.Delete_Btn = new System.Windows.Forms.Button();
             this.PiBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ClearHistoryBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Display
@@ -68,12 +72,13 @@
             // 
             this.History.BackColor = System.Drawing.Color.White;
             this.History.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.History.Enabled = false;
+            this.History.ContextMenuStrip = this.contextMenuStrip1;
             this.History.Location = new System.Drawing.Point(12, 37);
             this.History.Name = "History";
             this.History.ReadOnly = true;
             this.History.Size = new System.Drawing.Size(226, 289);
             this.History.TabIndex = 1;
+            this.History.TabStop = false;
             this.History.Text = "";
             this.History.KeyDown += new System.Windows.Forms.KeyEventHandler(this.History_KeyDown);
             // 
@@ -275,6 +280,21 @@
             this.PiBtn.UseVisualStyleBackColor = true;
             this.PiBtn.Click += new System.EventHandler(this.PiBtn_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClearHistoryBtn});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // ClearHistoryBtn
+            // 
+            this.ClearHistoryBtn.Name = "ClearHistoryBtn";
+            this.ClearHistoryBtn.Size = new System.Drawing.Size(180, 22);
+            this.ClearHistoryBtn.Text = "Clear History";
+            this.ClearHistoryBtn.Click += new System.EventHandler(this.ClearHistoryBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -305,6 +325,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Lommeregner";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +353,7 @@
         private Button Decimal_Btn;
         private Button Delete_Btn;
         private Button PiBtn;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem ClearHistoryBtn;
     }
 }

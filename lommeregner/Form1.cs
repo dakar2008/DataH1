@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Text.Json;
-
-namespace lommeregner
+﻿namespace lommeregner
 {
     public partial class Main : Form
     {
@@ -35,7 +32,7 @@ namespace lommeregner
             }
             Display.Focus();
         }
-        
+
         private void DeleteAll()
         {
             Display.Clear();
@@ -157,42 +154,38 @@ namespace lommeregner
             }
             else if (e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1)
             {
-
                 Num_1.PerformClick();
             }
             else if (e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2)
             {
-
                 Num_2.PerformClick();
             }
             else if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
             {
-
                 Num_3.PerformClick();
             }
             else if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
             {
-
                 Num_3.PerformClick();
             }
             else if (e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4)
             {
-
                 Num_4.PerformClick();
+            }
+            else if (e.KeyCode == Keys.D5 & e.Control || e.KeyCode == Keys.NumPad5 && e.Control)
+            {
+                PiBtn.PerformClick();
             }
             else if (e.KeyCode == Keys.D5 || e.KeyCode == Keys.NumPad5)
             {
-
                 Num_5.PerformClick();
             }
             else if (e.KeyCode == Keys.D6 || e.KeyCode == Keys.NumPad6)
             {
-
                 Num_6.PerformClick();
             }
             else if (e.KeyCode == Keys.D7 || e.KeyCode == Keys.NumPad7)
             {
-
                 Num_7.PerformClick();
             }
             else if (e.KeyCode == Keys.D8 || e.KeyCode == Keys.NumPad8)
@@ -340,6 +333,11 @@ namespace lommeregner
         private void Display_Enter(object sender, EventArgs e)
         {
             Display.Select(0, 0);
+        }
+
+        private void ClearHistoryBtn_Click(object sender, EventArgs e)
+        {
+            History.Clear();
         }
     }
 }
