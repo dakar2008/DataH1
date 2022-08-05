@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Display = new System.Windows.Forms.TextBox();
             this.History = new System.Windows.Forms.RichTextBox();
-            this.SubtractBtn = new System.Windows.Forms.Button();
-            this.MultiplyBtn = new System.Windows.Forms.Button();
-            this.DivideBtn = new System.Windows.Forms.Button();
-            this.AddBtn = new System.Windows.Forms.Button();
+            this.Subtract_Btn = new System.Windows.Forms.Button();
+            this.Multiply_Btn = new System.Windows.Forms.Button();
+            this.Divide_Btn = new System.Windows.Forms.Button();
+            this.Add_Btn = new System.Windows.Forms.Button();
             this.EqualBtn = new System.Windows.Forms.Button();
             this.Num_8 = new System.Windows.Forms.Button();
             this.Num_7 = new System.Windows.Forms.Button();
@@ -46,8 +46,8 @@
             this.Num_2 = new System.Windows.Forms.Button();
             this.Num_3 = new System.Windows.Forms.Button();
             this.Num_0 = new System.Windows.Forms.Button();
-            this.Num_Decimal = new System.Windows.Forms.Button();
-            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.Decimal_Btn = new System.Windows.Forms.Button();
+            this.Delete_Btn = new System.Windows.Forms.Button();
             this.PiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,12 +61,14 @@
             this.Display.ReadOnly = true;
             this.Display.Size = new System.Drawing.Size(607, 31);
             this.Display.TabIndex = 0;
+            this.Display.Enter += new System.EventHandler(this.Display_Enter);
             this.Display.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Display_KeyDown);
             // 
             // History
             // 
             this.History.BackColor = System.Drawing.Color.White;
             this.History.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.History.Enabled = false;
             this.History.Location = new System.Drawing.Point(12, 37);
             this.History.Name = "History";
             this.History.ReadOnly = true;
@@ -75,49 +77,49 @@
             this.History.Text = "";
             this.History.KeyDown += new System.Windows.Forms.KeyEventHandler(this.History_KeyDown);
             // 
-            // SubtractBtn
+            // Subtract_Btn
             // 
-            this.SubtractBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SubtractBtn.Location = new System.Drawing.Point(487, 214);
-            this.SubtractBtn.Name = "SubtractBtn";
-            this.SubtractBtn.Size = new System.Drawing.Size(112, 53);
-            this.SubtractBtn.TabIndex = 2;
-            this.SubtractBtn.Text = "-";
-            this.SubtractBtn.UseVisualStyleBackColor = true;
-            this.SubtractBtn.Click += new System.EventHandler(this.SubtractBtn_Click);
+            this.Subtract_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Subtract_Btn.Location = new System.Drawing.Point(487, 214);
+            this.Subtract_Btn.Name = "Subtract_Btn";
+            this.Subtract_Btn.Size = new System.Drawing.Size(112, 53);
+            this.Subtract_Btn.TabIndex = 2;
+            this.Subtract_Btn.Text = "-";
+            this.Subtract_Btn.UseVisualStyleBackColor = true;
+            this.Subtract_Btn.Click += new System.EventHandler(this.ClickButton);
             // 
-            // MultiplyBtn
+            // Multiply_Btn
             // 
-            this.MultiplyBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MultiplyBtn.Location = new System.Drawing.Point(487, 155);
-            this.MultiplyBtn.Name = "MultiplyBtn";
-            this.MultiplyBtn.Size = new System.Drawing.Size(112, 53);
-            this.MultiplyBtn.TabIndex = 3;
-            this.MultiplyBtn.Text = "X";
-            this.MultiplyBtn.UseVisualStyleBackColor = true;
-            this.MultiplyBtn.Click += new System.EventHandler(this.MultiplyBtn_Click);
+            this.Multiply_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Multiply_Btn.Location = new System.Drawing.Point(487, 155);
+            this.Multiply_Btn.Name = "Multiply_Btn";
+            this.Multiply_Btn.Size = new System.Drawing.Size(112, 53);
+            this.Multiply_Btn.TabIndex = 3;
+            this.Multiply_Btn.Text = "X";
+            this.Multiply_Btn.UseVisualStyleBackColor = true;
+            this.Multiply_Btn.Click += new System.EventHandler(this.ClickButton);
             // 
-            // DivideBtn
+            // Divide_Btn
             // 
-            this.DivideBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DivideBtn.Location = new System.Drawing.Point(487, 96);
-            this.DivideBtn.Name = "DivideBtn";
-            this.DivideBtn.Size = new System.Drawing.Size(112, 53);
-            this.DivideBtn.TabIndex = 4;
-            this.DivideBtn.Text = "/";
-            this.DivideBtn.UseVisualStyleBackColor = true;
-            this.DivideBtn.Click += new System.EventHandler(this.DivideBtn_Click);
+            this.Divide_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Divide_Btn.Location = new System.Drawing.Point(487, 96);
+            this.Divide_Btn.Name = "Divide_Btn";
+            this.Divide_Btn.Size = new System.Drawing.Size(112, 53);
+            this.Divide_Btn.TabIndex = 4;
+            this.Divide_Btn.Text = "/";
+            this.Divide_Btn.UseVisualStyleBackColor = true;
+            this.Divide_Btn.Click += new System.EventHandler(this.ClickButton);
             // 
-            // AddBtn
+            // Add_Btn
             // 
-            this.AddBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddBtn.Location = new System.Drawing.Point(487, 273);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(112, 53);
-            this.AddBtn.TabIndex = 5;
-            this.AddBtn.Text = "+";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.Add_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Add_Btn.Location = new System.Drawing.Point(487, 273);
+            this.Add_Btn.Name = "Add_Btn";
+            this.Add_Btn.Size = new System.Drawing.Size(112, 53);
+            this.Add_Btn.TabIndex = 5;
+            this.Add_Btn.Text = "+";
+            this.Add_Btn.UseVisualStyleBackColor = true;
+            this.Add_Btn.Click += new System.EventHandler(this.ClickButton);
             // 
             // EqualBtn
             // 
@@ -139,7 +141,7 @@
             this.Num_8.TabIndex = 7;
             this.Num_8.Text = "8";
             this.Num_8.UseVisualStyleBackColor = true;
-            this.Num_8.Click += new System.EventHandler(this.Num_8_Click);
+            this.Num_8.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_7
             // 
@@ -150,7 +152,7 @@
             this.Num_7.TabIndex = 8;
             this.Num_7.Text = "7";
             this.Num_7.UseVisualStyleBackColor = true;
-            this.Num_7.Click += new System.EventHandler(this.Num_7_Click);
+            this.Num_7.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_9
             // 
@@ -161,7 +163,7 @@
             this.Num_9.TabIndex = 9;
             this.Num_9.Text = "9";
             this.Num_9.UseVisualStyleBackColor = true;
-            this.Num_9.Click += new System.EventHandler(this.Num_9_Click);
+            this.Num_9.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_4
             // 
@@ -172,7 +174,7 @@
             this.Num_4.TabIndex = 10;
             this.Num_4.Text = "4";
             this.Num_4.UseVisualStyleBackColor = true;
-            this.Num_4.Click += new System.EventHandler(this.Num_4_Click);
+            this.Num_4.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_5
             // 
@@ -183,7 +185,7 @@
             this.Num_5.TabIndex = 11;
             this.Num_5.Text = "5";
             this.Num_5.UseVisualStyleBackColor = true;
-            this.Num_5.Click += new System.EventHandler(this.Num_5_Click);
+            this.Num_5.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_6
             // 
@@ -194,7 +196,7 @@
             this.Num_6.TabIndex = 12;
             this.Num_6.Text = "6";
             this.Num_6.UseVisualStyleBackColor = true;
-            this.Num_6.Click += new System.EventHandler(this.Num_6_Click);
+            this.Num_6.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_1
             // 
@@ -205,7 +207,7 @@
             this.Num_1.TabIndex = 13;
             this.Num_1.Text = "1";
             this.Num_1.UseVisualStyleBackColor = true;
-            this.Num_1.Click += new System.EventHandler(this.Num_1_Click);
+            this.Num_1.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_2
             // 
@@ -216,7 +218,7 @@
             this.Num_2.TabIndex = 14;
             this.Num_2.Text = "2";
             this.Num_2.UseVisualStyleBackColor = true;
-            this.Num_2.Click += new System.EventHandler(this.Num_2_Click);
+            this.Num_2.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_3
             // 
@@ -227,7 +229,7 @@
             this.Num_3.TabIndex = 15;
             this.Num_3.Text = "3";
             this.Num_3.UseVisualStyleBackColor = true;
-            this.Num_3.Click += new System.EventHandler(this.Num_3_Click);
+            this.Num_3.Click += new System.EventHandler(this.ClickButton);
             // 
             // Num_0
             // 
@@ -238,29 +240,29 @@
             this.Num_0.TabIndex = 17;
             this.Num_0.Text = "0";
             this.Num_0.UseVisualStyleBackColor = true;
-            this.Num_0.Click += new System.EventHandler(this.Num_0_Click);
+            this.Num_0.Click += new System.EventHandler(this.ClickButton);
             // 
-            // Num_Decimal
+            // Decimal_Btn
             // 
-            this.Num_Decimal.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Num_Decimal.Location = new System.Drawing.Point(406, 214);
-            this.Num_Decimal.Name = "Num_Decimal";
-            this.Num_Decimal.Size = new System.Drawing.Size(75, 53);
-            this.Num_Decimal.TabIndex = 18;
-            this.Num_Decimal.Text = ".";
-            this.Num_Decimal.UseVisualStyleBackColor = true;
-            this.Num_Decimal.Click += new System.EventHandler(this.Num_Decimal_Click);
+            this.Decimal_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Decimal_Btn.Location = new System.Drawing.Point(406, 214);
+            this.Decimal_Btn.Name = "Decimal_Btn";
+            this.Decimal_Btn.Size = new System.Drawing.Size(75, 53);
+            this.Decimal_Btn.TabIndex = 18;
+            this.Decimal_Btn.Text = ".";
+            this.Decimal_Btn.UseVisualStyleBackColor = true;
+            this.Decimal_Btn.Click += new System.EventHandler(this.ClickButton);
             // 
-            // DeleteBtn
+            // Delete_Btn
             // 
-            this.DeleteBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteBtn.Location = new System.Drawing.Point(487, 37);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(112, 53);
-            this.DeleteBtn.TabIndex = 19;
-            this.DeleteBtn.Text = "«";
-            this.DeleteBtn.UseVisualStyleBackColor = true;
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            this.Delete_Btn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Delete_Btn.Location = new System.Drawing.Point(487, 37);
+            this.Delete_Btn.Name = "Delete_Btn";
+            this.Delete_Btn.Size = new System.Drawing.Size(112, 53);
+            this.Delete_Btn.TabIndex = 19;
+            this.Delete_Btn.Text = "«";
+            this.Delete_Btn.UseVisualStyleBackColor = true;
+            this.Delete_Btn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // PiBtn
             // 
@@ -279,8 +281,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 332);
             this.Controls.Add(this.PiBtn);
-            this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.Num_Decimal);
+            this.Controls.Add(this.Delete_Btn);
+            this.Controls.Add(this.Decimal_Btn);
             this.Controls.Add(this.Num_0);
             this.Controls.Add(this.Num_3);
             this.Controls.Add(this.Num_2);
@@ -292,10 +294,10 @@
             this.Controls.Add(this.Num_7);
             this.Controls.Add(this.Num_8);
             this.Controls.Add(this.EqualBtn);
-            this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.DivideBtn);
-            this.Controls.Add(this.MultiplyBtn);
-            this.Controls.Add(this.SubtractBtn);
+            this.Controls.Add(this.Add_Btn);
+            this.Controls.Add(this.Divide_Btn);
+            this.Controls.Add(this.Multiply_Btn);
+            this.Controls.Add(this.Subtract_Btn);
             this.Controls.Add(this.History);
             this.Controls.Add(this.Display);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -303,7 +305,6 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Lommeregner";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,10 +314,10 @@
 
         private TextBox Display;
         private RichTextBox History;
-        private Button SubtractBtn;
-        private Button MultiplyBtn;
-        private Button DivideBtn;
-        private Button AddBtn;
+        private Button Subtract_Btn;
+        private Button Multiply_Btn;
+        private Button Divide_Btn;
+        private Button Add_Btn;
         private Button EqualBtn;
         private Button Num_8;
         private Button Num_7;
@@ -328,8 +329,8 @@
         private Button Num_2;
         private Button Num_3;
         private Button Num_0;
-        private Button Num_Decimal;
-        private Button DeleteBtn;
+        private Button Decimal_Btn;
+        private Button Delete_Btn;
         private Button PiBtn;
     }
 }
