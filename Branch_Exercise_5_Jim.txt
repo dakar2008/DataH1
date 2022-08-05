@@ -1,0 +1,31 @@
+Undersøg: GitLab Continuous Integration & Deployment?
+
+    Hvad betyder CI og hvordan kan man bruge versionsstyrring til dette?
+        Continuous integration (CI)
+            Involves the test automation of feature branches before they are merged to the main Git branch in a project.
+            This ensures that a codebase does not get updated with changes that could break something.
+
+Undersøg GitHub / Gitlab?
+    https://about.gitlab.com/devops-tools/github-vs-gitlab/
+
+    Hvad er forskellene?
+        yes GitLab is a repository hosting manager tool where GitHub is a repository hosting service tool.
+
+    Er der fordele og ulemper ved at bruge den ene frem for den anden?
+        Parameters				GitLab																		GitHub
+        Developed by			GitLab was developed by Dmitriy Zaporozhets and Valery Sizov.				GitHub was developed by Chris Wanstrath, Tom Preston-Werner, P. J. Hyett, and Scott Chacon.
+        Open-sourced			GitLab is open-source for community edition.								GitHub is not open source.
+        Public Repository		It allows users to make public repository.									It allows users to have unlimited free repository.
+        Private Repository		GitLab also provides free private repository.								GitHub allows users to have free private repository but with a maximum of three collaborators.
+        Navigation				GitLab provides the feature of navigation into the repository.				GitHub allows users to navigate usability.
+        Project Analysis		GitLab provides user to see project development charts.						GitHub doesn’t have this feature yet but they can check the commit history.
+        Advantages				"GitLab is freely available and open is source for community edition
+						        It is a cloud-native application and is highly secure."						"It helps us create an organized document for the project.
+																									        It is used for sharing the work in front of the public."
+        Disadvantages			"GitLab is available with many bugs and it makes the user experience sloppy.
+						        It is difficult to manage code reviews for first-timers."					
+                                                                                                            "There is a limited private repository.
+																										        It supports only Git version control."
+        Company					It is owned by GitLab Inc.													It is owned by Microsoft Corporation.
+        Security				More secure than Github.													It is less secure as security Dashboard, License Compliance is missing in GitHub.
+        Attachments				Gitlab supports adding other types of attachments.							GitHub does not allow adding other types of attachments.
