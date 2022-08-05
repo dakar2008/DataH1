@@ -48,6 +48,7 @@
             this.Num_0 = new System.Windows.Forms.Button();
             this.Num_Decimal = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
+            this.PiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -233,7 +234,7 @@
             this.Num_0.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Num_0.Location = new System.Drawing.Point(244, 214);
             this.Num_0.Name = "Num_0";
-            this.Num_0.Size = new System.Drawing.Size(156, 53);
+            this.Num_0.Size = new System.Drawing.Size(75, 53);
             this.Num_0.TabIndex = 17;
             this.Num_0.Text = "0";
             this.Num_0.UseVisualStyleBackColor = true;
@@ -261,11 +262,23 @@
             this.DeleteBtn.UseVisualStyleBackColor = true;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
+            // PiBtn
+            // 
+            this.PiBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PiBtn.Image = global::lommeregner.Properties.Resources.Apps_preferences_kcalc_constants_icon;
+            this.PiBtn.Location = new System.Drawing.Point(325, 214);
+            this.PiBtn.Name = "PiBtn";
+            this.PiBtn.Size = new System.Drawing.Size(75, 53);
+            this.PiBtn.TabIndex = 20;
+            this.PiBtn.UseVisualStyleBackColor = true;
+            this.PiBtn.Click += new System.EventHandler(this.PiBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 332);
+            this.Controls.Add(this.PiBtn);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.Num_Decimal);
             this.Controls.Add(this.Num_0);
@@ -317,5 +330,6 @@
         private Button Num_0;
         private Button Num_Decimal;
         private Button DeleteBtn;
+        private Button PiBtn;
     }
 }
