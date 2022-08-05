@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Versionsstyring", "Versionsstyring", "{5D937B1B-F045-45DB-8B0F-C1AD9693E8A3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionControl", "VersionControl", "{5D937B1B-F045-45DB-8B0F-C1AD9693E8A3}"
 	ProjectSection(SolutionItems) = preProject
 		Branching_Exercise_1.txt = Branching_Exercise_1.txt
 	EndProjectSection
