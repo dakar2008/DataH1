@@ -1,0 +1,16 @@
+• Undersøg: GitLab Continuous Integration & Deployment
+------------------------------------------------------------------------------------------
+	• Hvad Betyder CI
+		Det betyder Continuous Integration, og det er en automatisk process, der gør at
+		koden bliver kontrolleret.
+	• Hvordan kan man bruge versionsstyrring til dette?
+		Man kan opsætte sit GitLab til at foretage CI/CD på éns projekter.
+------------------------------------------------------------------------------------------
+• Undersøg: GitHub / Gitlab
+	• Hvad er forskellen?
+		Den største forskel er at GitLab har CI/CD indbygget og GitHub ikke har det.
+		Det er stadigvæk muligt at bruge CI/CD på GitHub, du skal dog selv integerer dette.
+	• Er der fordele og ulemper ved at bruge den éne frem for den anden?
+		De henvender sig til forskellige ting, GitLab henvender sig mere professionelt til virksomheder
+		hvor imod at GitHub mere henvender sig til private med hobby projekter og andre open source projekter.
+------------------------------------------------------------------------------------------
