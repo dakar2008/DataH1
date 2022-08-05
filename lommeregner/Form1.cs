@@ -510,7 +510,7 @@ namespace lommeregner
 
         private void PiBtn_Click(object sender, EventArgs e)
         {
-            Display.Text = "3.14159265358974158651772731545786503578025";
+            Display.Text = Math.PI.ToString().Replace(",", ".");
         }
     }
 }
