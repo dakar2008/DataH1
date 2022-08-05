@@ -1,5 +1,5 @@
 • Hvad er formålet med dokumentation?
-	Formålet med dokumentation er at beskrive hvad der sker, hvordan det sker, og hvordan det gør.
+	Formålet med dokumentation er at beskrive hvad der sker, hvordan det sker.
 	Det giver samtidig andre bedre mulighed for at kunne arbejde videre på det.
 	Det er også en god måde at få feedback fra andre.
 • Hvordan vil i grube det an hvis i skulle beskrive et program og begrunde jeres valg?
