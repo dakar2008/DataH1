@@ -124,7 +124,7 @@
             this.EqualBtn.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.EqualBtn.Location = new System.Drawing.Point(244, 273);
             this.EqualBtn.Name = "EqualBtn";
-            this.EqualBtn.Size = new System.Drawing.Size(156, 53);
+            this.EqualBtn.Size = new System.Drawing.Size(237, 53);
             this.EqualBtn.TabIndex = 6;
             this.EqualBtn.Text = "=";
             this.EqualBtn.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@
             this.Num_0.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Num_0.Location = new System.Drawing.Point(244, 214);
             this.Num_0.Name = "Num_0";
-            this.Num_0.Size = new System.Drawing.Size(156, 53);
+            this.Num_0.Size = new System.Drawing.Size(75, 53);
             this.Num_0.TabIndex = 17;
             this.Num_0.Text = "0";
             this.Num_0.UseVisualStyleBackColor = true;
@@ -265,11 +265,11 @@
             // PiBtn
             // 
             this.PiBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PiBtn.Location = new System.Drawing.Point(406, 274);
+            this.PiBtn.Image = global::lommeregner.Properties.Resources.Apps_preferences_kcalc_constants_icon;
+            this.PiBtn.Location = new System.Drawing.Point(325, 214);
             this.PiBtn.Name = "PiBtn";
-            this.PiBtn.Size = new System.Drawing.Size(75, 52);
+            this.PiBtn.Size = new System.Drawing.Size(75, 53);
             this.PiBtn.TabIndex = 20;
-            this.PiBtn.Text = "ϖ";
             this.PiBtn.UseVisualStyleBackColor = true;
             this.PiBtn.Click += new System.EventHandler(this.PiBtn_Click);
             // 
