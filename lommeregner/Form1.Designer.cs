@@ -1,4 +1,6 @@
-﻿namespace lommeregner
+﻿using System.Windows.Forms;
+
+namespace lommeregner
 {
     partial class Main
     {
