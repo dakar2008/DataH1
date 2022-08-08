@@ -138,7 +138,7 @@ namespace lommeregner
       this.Add_Btn.Location = new System.Drawing.Point(487, 273);
       this.Add_Btn.Name = "Add_Btn";
       this.Add_Btn.Size = new System.Drawing.Size(112, 53);
-      this.Add_Btn.TabIndex = 5;
+      this.Add_Btn.TabIndex = 1;
       this.Add_Btn.Text = "+";
       this.Add_Btn.UseVisualStyleBackColor = true;
       this.Add_Btn.Click += new System.EventHandler(this.Operator_Btn_Click);
@@ -149,50 +149,43 @@ namespace lommeregner
       this.EqualBtn.Location = new System.Drawing.Point(244, 273);
       this.EqualBtn.Name = "EqualBtn";
       this.EqualBtn.Size = new System.Drawing.Size(156, 53);
-      this.EqualBtn.TabIndex = 6;
+      this.EqualBtn.TabIndex = 0;
       this.EqualBtn.Text = "=";
       this.EqualBtn.UseVisualStyleBackColor = true;
       this.EqualBtn.Click += new System.EventHandler(this.EqualBtn_Click);
       // 
-      // Num_0
+      // Num_8
       // 
-      this.Num_0.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_0.Location = new System.Drawing.Point(244, 214);
-      this.Num_0.Name = "Num_0";
-      this.Num_0.Size = new System.Drawing.Size(75, 53);
-      this.Num_0.Text = "0";
-      this.Num_0.UseVisualStyleBackColor = true;
-      this.Num_0.Click += new System.EventHandler(this.Num_Click);
+      this.Num_8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_8.Location = new System.Drawing.Point(325, 37);
+      this.Num_8.Name = "Num_8";
+      this.Num_8.Size = new System.Drawing.Size(75, 53);
+      this.Num_8.TabIndex = 30;
+      this.Num_8.Text = "8";
+      this.Num_8.UseVisualStyleBackColor = true;
+      this.Num_8.Click += new System.EventHandler(this.Num_Click);
       // 
-      // Num_1
+      // Num_7
       // 
-      this.Num_1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_1.Location = new System.Drawing.Point(244, 155);
-      this.Num_1.Name = "Num_1";
-      this.Num_1.Size = new System.Drawing.Size(75, 53);
-      this.Num_1.Text = "1";
-      this.Num_1.UseVisualStyleBackColor = true;
-      this.Num_1.Click += new System.EventHandler(this.Num_Click);
+      this.Num_7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_7.Location = new System.Drawing.Point(244, 37);
+      this.Num_7.Name = "Num_7";
+      this.Num_7.Size = new System.Drawing.Size(75, 53);
+      this.Num_7.TabIndex = 29;
+      this.Num_7.Text = "7";
+      this.Num_7.UseVisualStyleBackColor = true;
+      this.Num_7.Click += new System.EventHandler(this.Num_Click);
       // 
-      // Num_2
+      // Num_9
       // 
-      this.Num_2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_2.Location = new System.Drawing.Point(325, 155);
-      this.Num_2.Name = "Num_2";
-      this.Num_2.Size = new System.Drawing.Size(75, 53);
-      this.Num_2.Text = "2";
-      this.Num_2.UseVisualStyleBackColor = true;
-      this.Num_2.Click += new System.EventHandler(this.Num_Click);
-      // 
-      // Num_3
-      // 
-      this.Num_3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_3.Location = new System.Drawing.Point(406, 155);
-      this.Num_3.Name = "Num_3";
-      this.Num_3.Size = new System.Drawing.Size(75, 53);
-      this.Num_3.Text = "3";
-      this.Num_3.UseVisualStyleBackColor = true;
-      this.Num_3.Click += new System.EventHandler(this.Num_Click);
+      this.Num_9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_9.Location = new System.Drawing.Point(406, 37);
+      this.Num_9.Name = "Num_9";
+      this.Num_9.Size = new System.Drawing.Size(75, 53);
+      this.Num_9.TabIndex = 31;
+      this.Num_9.Text = "9";
+      this.Num_9.UseVisualStyleBackColor = true;
+      this.Num_9.Click += new System.EventHandler(this.Num_Click);
       // 
       // Num_4
       // 
@@ -200,6 +193,7 @@ namespace lommeregner
       this.Num_4.Location = new System.Drawing.Point(244, 96);
       this.Num_4.Name = "Num_4";
       this.Num_4.Size = new System.Drawing.Size(75, 53);
+      this.Num_4.TabIndex = 26;
       this.Num_4.Text = "4";
       this.Num_4.UseVisualStyleBackColor = true;
       this.Num_4.Click += new System.EventHandler(this.Num_Click);
@@ -210,6 +204,7 @@ namespace lommeregner
       this.Num_5.Location = new System.Drawing.Point(325, 96);
       this.Num_5.Name = "Num_5";
       this.Num_5.Size = new System.Drawing.Size(75, 53);
+      this.Num_5.TabIndex = 27;
       this.Num_5.Text = "5";
       this.Num_5.UseVisualStyleBackColor = true;
       this.Num_5.Click += new System.EventHandler(this.Num_Click);
@@ -220,39 +215,54 @@ namespace lommeregner
       this.Num_6.Location = new System.Drawing.Point(406, 96);
       this.Num_6.Name = "Num_6";
       this.Num_6.Size = new System.Drawing.Size(75, 53);
+      this.Num_6.TabIndex = 28;
       this.Num_6.Text = "6";
       this.Num_6.UseVisualStyleBackColor = true;
       this.Num_6.Click += new System.EventHandler(this.Num_Click);
       // 
-      // Num_7
+      // Num_1
       // 
-      this.Num_7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_7.Location = new System.Drawing.Point(244, 37);
-      this.Num_7.Name = "Num_7";
-      this.Num_7.Size = new System.Drawing.Size(75, 53);
-      this.Num_7.Text = "7";
-      this.Num_7.UseVisualStyleBackColor = true;
-      this.Num_7.Click += new System.EventHandler(this.Num_Click);
+      this.Num_1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_1.Location = new System.Drawing.Point(244, 155);
+      this.Num_1.Name = "Num_1";
+      this.Num_1.Size = new System.Drawing.Size(75, 53);
+      this.Num_1.TabIndex = 23;
+      this.Num_1.Text = "1";
+      this.Num_1.UseVisualStyleBackColor = true;
+      this.Num_1.Click += new System.EventHandler(this.Num_Click);
       // 
-      // Num_8
+      // Num_2
       // 
-      this.Num_8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_8.Location = new System.Drawing.Point(325, 37);
-      this.Num_8.Name = "Num_8";
-      this.Num_8.Size = new System.Drawing.Size(75, 53);
-      this.Num_8.Text = "8";
-      this.Num_8.UseVisualStyleBackColor = true;
-      this.Num_8.Click += new System.EventHandler(this.Num_Click);
+      this.Num_2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_2.Location = new System.Drawing.Point(325, 155);
+      this.Num_2.Name = "Num_2";
+      this.Num_2.Size = new System.Drawing.Size(75, 53);
+      this.Num_2.TabIndex = 24;
+      this.Num_2.Text = "2";
+      this.Num_2.UseVisualStyleBackColor = true;
+      this.Num_2.Click += new System.EventHandler(this.Num_Click);
       // 
-      // Num_9
+      // Num_3
       // 
-      this.Num_9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-      this.Num_9.Location = new System.Drawing.Point(406, 37);
-      this.Num_9.Name = "Num_9";
-      this.Num_9.Size = new System.Drawing.Size(75, 53);
-      this.Num_9.Text = "9";
-      this.Num_9.UseVisualStyleBackColor = true;
-      this.Num_9.Click += new System.EventHandler(this.Num_Click);
+      this.Num_3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_3.Location = new System.Drawing.Point(406, 155);
+      this.Num_3.Name = "Num_3";
+      this.Num_3.Size = new System.Drawing.Size(75, 53);
+      this.Num_3.TabIndex = 25;
+      this.Num_3.Text = "3";
+      this.Num_3.UseVisualStyleBackColor = true;
+      this.Num_3.Click += new System.EventHandler(this.Num_Click);
+      // 
+      // Num_0
+      // 
+      this.Num_0.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.Num_0.Location = new System.Drawing.Point(244, 214);
+      this.Num_0.Name = "Num_0";
+      this.Num_0.Size = new System.Drawing.Size(75, 53);
+      this.Num_0.TabIndex = 22;
+      this.Num_0.Text = "0";
+      this.Num_0.UseVisualStyleBackColor = true;
+      this.Num_0.Click += new System.EventHandler(this.Num_Click);
       // 
       // DecimalPoint_Btn
       // 

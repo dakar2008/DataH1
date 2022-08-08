@@ -61,6 +61,7 @@ namespace lommeregner
       Calc.InputNumeric(((Button)sender).Text[0]);
       Display.Text = Calc.CurrentNumberString;
       History.Text = string.Join("\n", Calc.History);
+      EqualBtn.Focus();
     }
 
     private void DecimalPoint_Btn_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace lommeregner
       Calc.InputDecimalPoint();
       Display.Text = Calc.CurrentNumberString;
       History.Text = string.Join("\n", Calc.History);
+      EqualBtn.Focus();
     }
 
     private void Delete_Btn_Click(object sender, EventArgs e)
@@ -75,19 +77,14 @@ namespace lommeregner
       Calc = new();
       Display.Text = "0";
       History.Text = "";
+      EqualBtn.Focus();
     }
 
     private void Operator_Btn_Click(object sender, EventArgs e)
     {
       Calc.InputOperator(((Button)sender).Text[0]);
       History.Text = string.Join("\n", Calc.History);
-    }
-
-    private void EqualBtn_Click(object sender, EventArgs e)
-    {
-      Calc.Calculate();
-      Display.Text = Calc.CurrentNumberString;
-      History.Text = string.Join("\n", Calc.History);
+      EqualBtn.Focus();
     }
 
     private void PiBtn_Click(object sender, EventArgs e)
@@ -95,11 +92,20 @@ namespace lommeregner
       Calc.InputPI();
       Display.Text = Calc.CurrentNumberString;
       History.Text = string.Join("\n", Calc.History);
+      EqualBtn.Focus();
     }
 
     private void SquareRootBtn_Click(object sender, EventArgs e)
     {
       Calc.CalculateSquareRoot();
+      Display.Text = Calc.CurrentNumberString;
+      History.Text = string.Join("\n", Calc.History);
+      EqualBtn.Focus();
+    }
+
+    private void EqualBtn_Click(object sender, EventArgs e)
+    {
+      Calc.Calculate();
       Display.Text = Calc.CurrentNumberString;
       History.Text = string.Join("\n", Calc.History);
     }
