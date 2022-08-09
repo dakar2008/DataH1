@@ -30,10 +30,17 @@ namespace CleanCodeExersises
          * Solution to Magic Number exercise
          * Use consts to describe the numbers you are using to your programs.
          */
-        public bool IsLegalDrikingAgeClean()
+        public bool IsLegalDrikingAgeClean(int age)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            const int legalDrikingAge = 21;
+            if (age > legalDrikingAge)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         /*
          * Be positive exersise
@@ -54,10 +61,18 @@ namespace CleanCodeExersises
         /*
          * Solution to Be positive exersise
          */
-        public bool IsLoggedInClean()
+        public bool IsLoggedInClean(bool isLoggedIn)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            if (isLoggedIn)
+            {
+                System.Console.WriteLine("Succesfully logged in.");
+                return true;
+            }
+            else
+            {
+                System.Console.WriteLine("Failed to logged in.");
+                return false;
+            }
         }
         /*
          * Intermediate exercise

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace GPOpgaver
 {
@@ -39,8 +40,14 @@ namespace GPOpgaver
          */
         public static bool IsPalindrome(string s)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            for (int i = 0; i < s.Length / 2; i++)
+            {
+                if (s[i] != s[s.Length - 1 - i])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
         /*
          * Introduktion til Algoritmer
@@ -51,8 +58,16 @@ namespace GPOpgaver
          */
         public static int StepsInLinearSearch(int searchFor, int[] intergerArray)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            int steps = 0;
+            for (int i = 0; i < intergerArray.Length; i++)
+            {
+                steps++;
+                if (intergerArray[i] == searchFor)
+                {
+                    return steps;
+                }
+            }
+            return steps;
         }
         /*
          * Introduktion til Algoritmer
@@ -63,8 +78,25 @@ namespace GPOpgaver
          */
         public static int StepsInBinarySearch(int[] integerArray, int arrayStart, int arrayEnd, int searchFor)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            int steps = 0;
+            while (arrayStart <= arrayEnd)
+            {
+                steps++;
+                int mid = (arrayStart + arrayEnd) / 2;
+                if (integerArray[mid] == searchFor)
+                {
+                    return steps;
+                }
+                else if (integerArray[mid] > searchFor)
+                {
+                    arrayEnd = mid - 1;
+                }
+                else
+                {
+                    arrayStart = mid + 1;
+                }
+            }
+            return steps;
         }
         /*
          * Introduktion til Algoritmer
@@ -73,8 +105,17 @@ namespace GPOpgaver
          */
         public static int InsertSortedList(List<int> sortedList, int insert)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            int steps = 0;
+            for (int i = 0; i < sortedList.Count; i++)
+            {
+                if (sortedList[i] > insert)
+                {
+                    sortedList.Insert(i, insert);
+                    return steps;
+                }
+                steps++;
+            }
+            return steps;
         }
         /*
          * Exercise 6.
@@ -84,8 +125,12 @@ namespace GPOpgaver
          */
         public static int[] ArrayOfMultiples(int num, int length)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            int[] array = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                array[i] = num * (i + 1);
+            }
+            return array;
         }
         /*
          * Exercise 7.
@@ -94,8 +139,15 @@ namespace GPOpgaver
          */
         public static int PowerRanger(int power, int min, int max)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            int count = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                if (Math.Pow(i, power) >= min && Math.Pow(i, power) <= max)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
         /*
          * Exercise 8.
@@ -106,8 +158,12 @@ namespace GPOpgaver
          */
         public static long Factorial(int n)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            long factorial = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+            }
+            return factorial;
         }
         /*
          * Exercise 9.
