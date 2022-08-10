@@ -22,7 +22,7 @@ namespace DataTypeDesc
             sbyte* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(sbyte).ToString(), sbyte.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(sbyte).ToString(), sbyte.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -39,7 +39,7 @@ namespace DataTypeDesc
             byte* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(byte).ToString(), byte.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(byte).ToString(), byte.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -56,7 +56,7 @@ namespace DataTypeDesc
             short* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(short).ToString(), short.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(short).ToString(), short.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -73,7 +73,7 @@ namespace DataTypeDesc
             ushort* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(ushort).ToString(), ushort.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(ushort).ToString(), ushort.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -90,7 +90,7 @@ namespace DataTypeDesc
             int* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(int).ToString(), int.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(int).ToString(), int.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -107,7 +107,7 @@ namespace DataTypeDesc
             uint* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(uint).ToString(), uint.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(uint).ToString(), uint.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -124,7 +124,7 @@ namespace DataTypeDesc
             long* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(long).ToString(), long.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(long).ToString(), long.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -141,7 +141,7 @@ namespace DataTypeDesc
             ulong* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(ulong).ToString(), ulong.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(ulong).ToString(), ulong.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -158,7 +158,7 @@ namespace DataTypeDesc
             float* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(float).ToString(), float.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(float).ToString(), float.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -175,7 +175,7 @@ namespace DataTypeDesc
             double* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(double).ToString(), double.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(double).ToString(), double.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -192,7 +192,7 @@ namespace DataTypeDesc
             decimal* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(decimal).ToString(), decimal.MaxValue.ToString("N2").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(decimal).ToString(), decimal.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
