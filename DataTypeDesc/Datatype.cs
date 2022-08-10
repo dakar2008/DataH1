@@ -15,6 +15,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -22,7 +23,7 @@ namespace DataTypeDesc
             sbyte* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(sbyte).ToString(), sbyte.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(sbyte).ToString(), sbyte.MinValue.ToString("N"), sbyte.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -32,6 +33,7 @@ namespace DataTypeDesc
             
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -39,7 +41,7 @@ namespace DataTypeDesc
             byte* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(byte).ToString(), byte.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(byte).ToString(), byte.MinValue.ToString("N"), byte.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -49,6 +51,7 @@ namespace DataTypeDesc
             
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -56,7 +59,7 @@ namespace DataTypeDesc
             short* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(short).ToString(), short.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(short).ToString(), short.MinValue.ToString("N"), short.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -66,6 +69,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -73,7 +77,7 @@ namespace DataTypeDesc
             ushort* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(ushort).ToString(), ushort.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(ushort).ToString(), ushort.MinValue.ToString("N"), ushort.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -83,6 +87,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -90,7 +95,7 @@ namespace DataTypeDesc
             int* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(int).ToString(), int.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(int).ToString(), int.MinValue.ToString("N"), int.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -100,6 +105,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -107,7 +113,7 @@ namespace DataTypeDesc
             uint* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(uint).ToString(), uint.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(uint).ToString(), uint.MinValue.ToString("N"), uint.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -117,6 +123,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -124,7 +131,7 @@ namespace DataTypeDesc
             long* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(long).ToString(), long.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(long).ToString(), long.MinValue.ToString("N"), long.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -134,6 +141,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -141,7 +149,7 @@ namespace DataTypeDesc
             ulong* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(ulong).ToString(), ulong.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(ulong).ToString(), ulong.MinValue.ToString("N"), ulong.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -151,6 +159,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -158,7 +167,7 @@ namespace DataTypeDesc
             float* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(float).ToString(), float.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(float).ToString(), float.MinValue.ToString("N"), float.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -168,6 +177,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -175,7 +185,7 @@ namespace DataTypeDesc
             double* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(double).ToString(), double.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(double).ToString(), double.MinValue.ToString("N"), double.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -185,6 +195,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -192,7 +203,7 @@ namespace DataTypeDesc
             decimal* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(decimal).ToString(), decimal.MaxValue.ToString("N").Replace(",00", ""), add.ToString("X"));
+            table.AddRow(sizeof(decimal).ToString(), decimal.MinValue.ToString("N"), decimal.MaxValue.ToString("N"), add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
@@ -202,6 +213,7 @@ namespace DataTypeDesc
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
+            table.AddColumn("Min Value");
             table.AddColumn("Max Value");
             table.AddColumn("Hex");
 
@@ -209,7 +221,7 @@ namespace DataTypeDesc
             bool* pointer = &testVariable;
             IntPtr add = (IntPtr)pointer;
 
-            table.AddRow(sizeof(bool).ToString(), "1", add.ToString("X"));
+            table.AddRow(sizeof(bool).ToString(), "1", "1", add.ToString("X"));
 
             AnsiConsole.Write(table);
         }
