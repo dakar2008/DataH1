@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-/*
+﻿/*
  * This project is a collection of exersises that will teach students how to write clean and DRY code.
  * These exersises are stutable for beginer to experienced programmers.
  */
@@ -95,12 +92,21 @@ namespace CleanCodeExersises
          * Solution to ohm Intermediate exercise
          * An intermediate Variable says a lot more them a long expression
          */
-        public bool eligibleClean()
+        public bool eligibleClean(Employee employee)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            const int age = 55;
+            const int yearsEmployed = 10;
+            const bool isRetired = true;
+            if (employee.Age > age && employee.YearsEmployed > yearsEmployed && employee.IsRetired == isRetired)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        
+
         /*
          * Ternary exersise
          */
@@ -109,7 +115,8 @@ namespace CleanCodeExersises
             if (isPreordered == true)
             {
                 return 200.00;
-            } else
+            }
+            else
             {
                 return 350.00;
             }
@@ -118,16 +125,12 @@ namespace CleanCodeExersises
          * Solution to Ternary exersise
          * Use a oneline Ternary.
          */
-        public double GetPriceClean()
+        public double GetPriceClean(bool isPreordered)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            return isPreordered ? 200.00 : 350.00;
         }
         /*
          * Strong type exersise - not done
          */
-
     }
 }
-
-
