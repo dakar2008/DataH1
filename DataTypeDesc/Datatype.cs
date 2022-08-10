@@ -18,19 +18,5 @@ namespace DataTypeDesc
 
             AnsiConsole.Write(table);
         }
-
-        public static unsafe void PrintVariableInformation(ref bool datatype)
-        {
-            AnsiConsole.Write(new FigletText("bool").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-
-            table.AddRow(sizeof(bool).ToString(), "1", "1");
-
-            AnsiConsole.Write(table);
-        }
     }
 }

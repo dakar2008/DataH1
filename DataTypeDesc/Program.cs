@@ -40,7 +40,7 @@ namespace DataTypeDesc
             {
                 AnsiConsole.Write(new FigletText("Data Type Info").LeftAligned().Color(Color.Blue));
                 AnsiConsole.WriteLine();
-                AnsiConsole.Write(new Markup("Following datatypes are avalible: [green]sbyte[/] : [green]byte[/]: [green]short[/]: [green]ushort[/]: [green]int[/]: [green]uint[/]: [green]long[/]: [green]ulong[/]: [green]float[/]: [green]double[/]: [green]decimal[/]: [green]bool[/]"));
+                AnsiConsole.Write(new Markup("Following datatypes are avalible: [green]sbyte[/] : [green]byte[/]: [green]short[/]: [green]ushort[/]: [green]int[/]: [green]uint[/]: [green]long[/]: [green]ulong[/]: [green]float[/]: [green]double[/]: [green]decimal[/]"));
                 AnsiConsole.WriteLine();
                 AnsiConsole.Write(new Markup("[orange3]Write [green]diagram[/] for a visual diagram of datatypes[/]"));
                 AnsiConsole.WriteLine();
@@ -121,14 +121,6 @@ namespace DataTypeDesc
                     case "decimal":
                         {
                             decimal variable = 5;
-                            Datatype.PrintVariableInformation(ref variable);
-                            break;
-                        }
-
-                    case "bool":
-                    case "boolean":
-                        {
-                            bool variable = true;
                             Datatype.PrintVariableInformation(ref variable);
                             break;
                         }
