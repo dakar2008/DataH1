@@ -115,12 +115,12 @@ namespace XUnitTestGPOpgaver
             Assert.False(Opgaver.ValidatePassword("mypassword11")); //No uppercase
             Assert.False(Opgaver.ValidatePassword("MYPASSWORD11")); //No lowercase
             Assert.False(Opgaver.ValidatePassword("iLoveYou")); //No numbers
-            Assert.False(Opgaver.ValidatePassword("Pè7$areLove")); //è is not a speciel character
             // VALID PASSWORDS
             Assert.True(Opgaver.ValidatePassword("H4(k+x0z"));
             Assert.True(Opgaver.ValidatePassword("Fhweg93@"));
             Assert.True(Opgaver.ValidatePassword("aA0!@#$%^&*()+=_-{}[]:;\""));
             Assert.True(Opgaver.ValidatePassword("zZ9'?<>,."));
+            Assert.True(Opgaver.ValidatePassword("Pè7$areLove"));
         }
     }
 }
