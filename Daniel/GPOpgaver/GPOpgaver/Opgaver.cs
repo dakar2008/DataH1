@@ -14,9 +14,7 @@ namespace GPOpgaver
         */
         public static void Interchange(ref int x, ref int y)
         {
-            int tempx = x;
-            x = y;
-            y = tempx;
+            (x, y) = (y, x);
         }
         /*
         * Introduktion til Algoritmer
@@ -26,10 +24,7 @@ namespace GPOpgaver
         */
         public static void InterchangeTriple(ref int x, ref int y, ref int z)
         {
-            int tempz = z;
-            z = y;
-            y = x;
-            x = tempz;
+            (x, y, z) = (z, x, y);
         }
         /*
          * Introduktion til Algoritmer
@@ -182,25 +177,17 @@ namespace GPOpgaver
                 string numberPart = "";
                 for (int i = 0; i < txt.Length; i++)
                 {
-                    if (!char.IsLetter(txt[i]))
+                    if (char.IsDigit(txt[i]))
                     {
                         textPart = txt.Substring(0, i);
                         numberPart = txt.Substring(i, txt.Length - i);
-
-                        if (numberPart.StartsWith("0"))
-                        {
-                            int numberPartLength = numberPart.Length;
-                            int numberPartInt = int.Parse(numberPart);
-                            numberPartInt++;
-                            numberPart = numberPartInt.ToString();
-                            numberPart = numberPart.PadLeft(numberPartLength, '0');
-                        }
-                        else
-                        {
-                            int numberPartInt = int.Parse(numberPart);
-                            numberPartInt++;
-                            numberPart = numberPartInt.ToString();
-                        }
+                        
+                        int numberPartLength = numberPart.Length;
+                        int numberPartInt = int.Parse(numberPart);
+                        numberPartInt++;
+                        numberPart = numberPartInt.ToString();
+                        numberPart = numberPart.PadLeft(numberPartLength, '0');
+                        
                         break;
                     }
                 }

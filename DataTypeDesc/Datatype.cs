@@ -1,212 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 using Spectre.Console;
 
 namespace DataTypeDesc
 {
     public static class Datatype
     {
-        public static unsafe void PrintVariableInformation(ref sbyte datatype)
+        public static unsafe void PrintVariableInformation<T>(ref T datatype)
         {
-            AnsiConsole.Write(new FigletText("sbyte").LeftAligned().Color(Color.Red));
+            AnsiConsole.Write(new FigletText(datatype.GetType().Name).LeftAligned().Color(Color.Red));
 
             var table = new Table();
             table.AddColumn("Size In Bytes");
             table.AddColumn("Min Value");
             table.AddColumn("Max Value");
-            table.AddColumn("Hex");
 
-            sbyte testVariable;
-            sbyte* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(sbyte).ToString(), sbyte.MinValue.ToString("N"), sbyte.MaxValue.ToString("N"), add.ToString("X"));
+            table.AddRow(Marshal.SizeOf(datatype).ToString(), typeof(T).GetField("MinValue").GetValue(datatype).ToString(), typeof(T).GetField("MaxValue").GetValue(datatype).ToString());
 
             AnsiConsole.Write(table);
         }
-        public static unsafe void PrintVariableInformation(ref byte datatype)
-        {
-            AnsiConsole.Write(new FigletText("byte").LeftAligned().Color(Color.Red));
-            
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
 
-            byte testVariable;
-            byte* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(byte).ToString(), byte.MinValue.ToString("N"), byte.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref short datatype)
-        {
-            AnsiConsole.Write(new FigletText("short").LeftAligned().Color(Color.Red));
-            
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            short testVariable;
-            short* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(short).ToString(), short.MinValue.ToString("N"), short.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref ushort datatype)
-        {
-            AnsiConsole.Write(new FigletText("ushort").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            ushort testVariable;
-            ushort* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(ushort).ToString(), ushort.MinValue.ToString("N"), ushort.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref int datatype)
-        {
-            AnsiConsole.Write(new FigletText("int").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            int testVariable;
-            int* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(int).ToString(), int.MinValue.ToString("N"), int.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref uint datatype)
-        {
-            AnsiConsole.Write(new FigletText("uint").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            uint testVariable;
-            uint* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(uint).ToString(), uint.MinValue.ToString("N"), uint.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref long datatype)
-        {
-            AnsiConsole.Write(new FigletText("long").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            long testVariable;
-            long* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(long).ToString(), long.MinValue.ToString("N"), long.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref ulong datatype)
-        {
-            AnsiConsole.Write(new FigletText("ulong").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            ulong testVariable;
-            ulong* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(ulong).ToString(), ulong.MinValue.ToString("N"), ulong.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref float datatype)
-        {
-            AnsiConsole.Write(new FigletText("float").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            float testVariable;
-            float* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(float).ToString(), float.MinValue.ToString("N"), float.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref double datatype)
-        {
-            AnsiConsole.Write(new FigletText("double").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            double testVariable;
-            double* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(double).ToString(), double.MinValue.ToString("N"), double.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
-        public static unsafe void PrintVariableInformation(ref decimal datatype)
-        {
-            AnsiConsole.Write(new FigletText("decimal").LeftAligned().Color(Color.Red));
-
-            var table = new Table();
-            table.AddColumn("Size In Bytes");
-            table.AddColumn("Min Value");
-            table.AddColumn("Max Value");
-            table.AddColumn("Hex");
-
-            decimal testVariable;
-            decimal* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(decimal).ToString(), decimal.MinValue.ToString("N"), decimal.MaxValue.ToString("N"), add.ToString("X"));
-
-            AnsiConsole.Write(table);
-        }
         public static unsafe void PrintVariableInformation(ref bool datatype)
         {
             AnsiConsole.Write(new FigletText("bool").LeftAligned().Color(Color.Red));
@@ -215,13 +27,8 @@ namespace DataTypeDesc
             table.AddColumn("Size In Bytes");
             table.AddColumn("Min Value");
             table.AddColumn("Max Value");
-            table.AddColumn("Hex");
 
-            bool testVariable;
-            bool* pointer = &testVariable;
-            IntPtr add = (IntPtr)pointer;
-
-            table.AddRow(sizeof(bool).ToString(), "1", "1", add.ToString("X"));
+            table.AddRow(sizeof(bool).ToString(), "1", "1");
 
             AnsiConsole.Write(table);
         }
