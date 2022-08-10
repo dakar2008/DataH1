@@ -1,7 +1,6 @@
-using System;
-using Xunit;
-using System.Collections.Generic;
 using GPOpgaver;
+using System.Collections.Generic;
+using Xunit;
 //using GPOpgaveløsning;
 
 
@@ -10,7 +9,7 @@ namespace XUnitTestGPOpgaver
     public class AlgoritmerIntroTest
     {
         [Fact]
-        public void Exercise1Test()
+        public void Exercise01Test()
         {
             int x = 5, y = 10;
             Opgaver.Interchange(ref x, ref y);
@@ -18,17 +17,16 @@ namespace XUnitTestGPOpgaver
             Assert.Equal(5, y);
         }
         [Fact]
-        public void Exercise2Test()
+        public void Exercise02Test()
         {
             int x = 1, y = 2, z = 3;
             Opgaver.InterchangeTriple(ref x, ref y, ref z);
-            Assert.Equal( 3, x);
-            Assert.Equal( 1, y);
-            Assert.Equal( 2, z);
+            Assert.Equal(3, x);
+            Assert.Equal(1, y);
+            Assert.Equal(2, z);
         }
-
         [Fact]
-        public void Exercise3Test()
+        public void Exercise03Test()
         {
             string palindrome = "level";
             Assert.True(Opgaver.IsPalindrome(palindrome));
@@ -40,31 +38,31 @@ namespace XUnitTestGPOpgaver
             Assert.True(Opgaver.IsPalindrome(palindrome));
         }
         [Fact]
-        public void Exercise4ATest()
+        public void Exercise04ATest()
         {
             int[] intArray = { 1, 3, 4, 5, 6, 8, 9, 11 };
-            Assert.Equal( 7, Opgaver.StepsInLinearSearch(9, intArray));
-            Assert.Equal( 8, Opgaver.StepsInLinearSearch(11, intArray));
-            Assert.Equal( 4, Opgaver.StepsInLinearSearch(5, intArray));
+            Assert.Equal(7, Opgaver.StepsInLinearSearch(9, intArray));
+            Assert.Equal(8, Opgaver.StepsInLinearSearch(11, intArray));
+            Assert.Equal(4, Opgaver.StepsInLinearSearch(5, intArray));
         }
         [Fact]
-        public void Exercise4BTest()
+        public void Exercise04BTest()
         {
             int[] intArray = { 1, 3, 4, 5, 6, 8, 9, 11 };
-            Assert.Equal( 2, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 3));
-            Assert.Equal( 1, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 5));
-            Assert.Equal( 3, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 9));
+            Assert.Equal(2, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 3));
+            Assert.Equal(1, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 5));
+            Assert.Equal(3, Opgaver.StepsInBinarySearch(intArray, 0, intArray.Length - 1, 9));
         }
         [Fact]
-        public void Exercise5Test()
+        public void Exercise05Test()
         {
-            List<int> listA = new List<int>{ 1, 2, 3, 5, 6, 8, 9};
-            Assert.Equal( 3, Opgaver.InsertSortedList(listA, 4));
+            List<int> listA = new List<int> { 1, 2, 3, 5, 6, 8, 9 };
+            Assert.Equal(3, Opgaver.InsertSortedList(listA, 4));
             List<int> listB = new List<int> { 1, 2, 3, 5, 6, 8, 9 };
-            Assert.Equal( 5, Opgaver.InsertSortedList(listB, 7));
+            Assert.Equal(5, Opgaver.InsertSortedList(listB, 7));
         }
         [Fact]
-        public void Exercise6Test()
+        public void Exercise06Test()
         {
             Assert.Equal(new int[] { 7, 14, 21, 28, 35 }, Opgaver.ArrayOfMultiples(7, 5));
             Assert.Equal(new int[] { 12, 24, 36, 48, 60, 72, 84, 96, 108, 120 }, Opgaver.ArrayOfMultiples(12, 10));
@@ -75,7 +73,7 @@ namespace XUnitTestGPOpgaver
             Assert.Equal(new int[] { 11, 22, 33, 44, 55, 66, 77, 88, 99, 110, 121, 132, 143, 154, 165, 176, 187, 198, 209, 220, 231 }, Opgaver.ArrayOfMultiples(11, 21));
         }
         [Fact]
-        public void Exercise7Test()
+        public void Exercise07Test()
         {
             Assert.Equal(1, Opgaver.PowerRanger(5, 31, 33));
             Assert.Equal(3, Opgaver.PowerRanger(4, 250, 1300));
@@ -86,7 +84,7 @@ namespace XUnitTestGPOpgaver
             Assert.Equal(10, Opgaver.PowerRanger(2, 1, 100));
         }
         [Fact]
-        public void Exercise8Test()
+        public void Exercise08Test()
         {
             Assert.Equal(1, Opgaver.Factorial(0));
             Assert.Equal(2, Opgaver.Factorial(2));
@@ -99,7 +97,7 @@ namespace XUnitTestGPOpgaver
             Assert.Equal(87178291200, Opgaver.Factorial(14));
         }
         [Fact]
-        public void Exercise9Test()
+        public void Exercise09Test()
         {
             Assert.Equal("foo1", Opgaver.IncrementString("foo"));
             Assert.Equal("foobar01003", Opgaver.IncrementString("foobar01002"));
@@ -108,7 +106,6 @@ namespace XUnitTestGPOpgaver
             Assert.Equal("foo10000", Opgaver.IncrementString("foo09999"));
             Assert.Equal("foo10000", Opgaver.IncrementString("foo9999"));
         }
-
         [Fact]
         public void Exercise10Test()
         {
@@ -124,7 +121,6 @@ namespace XUnitTestGPOpgaver
             Assert.True(Opgaver.ValidatePassword("Fhweg93@"));
             Assert.True(Opgaver.ValidatePassword("aA0!@#$%^&*()+=_-{}[]:;\""));
             Assert.True(Opgaver.ValidatePassword("zZ9'?<>,."));
-
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace GPOpgaver
@@ -177,8 +176,40 @@ namespace GPOpgaver
          */
         public static string IncrementString(string txt)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            if (txt.Any(x => char.IsDigit(x)))
+            {
+                string textPart = "";
+                string numberPart = "";
+                for (int i = 0; i < txt.Length; i++)
+                {
+                    if (!char.IsLetter(txt[i]))
+                    {
+                        textPart = txt.Substring(0, i);
+                        numberPart = txt.Substring(i, txt.Length - i);
+
+                        if (numberPart.StartsWith("0"))
+                        {
+                            int numberPartLength = numberPart.Length;
+                            int numberPartInt = int.Parse(numberPart);
+                            numberPartInt++;
+                            numberPart = numberPartInt.ToString();
+                            numberPart = numberPart.PadLeft(numberPartLength, '0');
+                        }
+                        else
+                        {
+                            int numberPartInt = int.Parse(numberPart);
+                            numberPartInt++;
+                            numberPart = numberPartInt.ToString();
+                        }
+                        break;
+                    }
+                }
+                return textPart + numberPart;
+            }
+            else
+            {
+                return txt + "1";
+            }
         }
         /*
          * Exercise 10.
@@ -193,8 +224,37 @@ namespace GPOpgaver
          */
         public static bool ValidatePassword(string password)
         {
-            throw new NotImplementedException();
-            //Write your solution here
+            const int minPasswordLength = 8;
+            const int maxPasswordLength = 25;
+            const string specialCharacters = "!@#$%^&*()+=-{}[]:;\"'?<>,._";
+            if (password.Length < minPasswordLength)
+            {
+                return false;
+            }
+            else if (password.Length >= maxPasswordLength)
+            {
+                return false;
+            }
+            else if (!password.Any(x => char.IsUpper(x)))
+            {
+                return false;
+            }
+            else if (!password.Any(x => char.IsLower(x)))
+            {
+                return false;
+            }
+            else if (!password.Any(x => char.IsDigit(x)))
+            {
+                return false;
+            }
+            else if (!password.Any(x => specialCharacters.Contains(x)))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
