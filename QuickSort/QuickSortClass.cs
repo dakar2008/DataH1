@@ -7,11 +7,6 @@
             //Swapping with tubles
             (arr[i], arr[j]) = (arr[j], arr[i]);
         }
-        
-        private static int Compare<T>(T left, T right)
-        {
-            return (left as IComparable<T>).CompareTo(right);
-        }
 
         public static T[] QuickSort<T>(T[] arr, int left, int right)
         {
@@ -39,12 +34,12 @@
             T pivot = arr[left];
             while (true)
             {
-                while (Compare(arr[left], pivot) < 0)
+                while ((arr[left] as IComparable<T>).CompareTo(pivot) < 0)
                 {
                     //If the value is less than the pivot, move to the right
                     left++;
                 }
-                while (Compare(arr[right], pivot) > 0)
+                while ((arr[right] as IComparable<T>).CompareTo(pivot) > 0)
                 {
                     //If the value is greater than the pivot, move to the left
                     right--;
