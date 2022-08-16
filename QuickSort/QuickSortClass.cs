@@ -12,17 +12,20 @@
         {
             if (left < right)
             {
+                Thread t;
                 //Get pivot point
                 int pivot = Partition(arr, left, right);
                 //If pivot is greater than 1, call QuickSort  method with arr, left, pivot - 1
                 if (pivot > 1)
                 {
-                    QuickSort(arr, left, pivot - 1);
+                    t = new Thread(() => QuickSort(arr, left, pivot - 1));
+                    t.Start();
                 }
                 //If pivot + 1 is less than right, call QuickSort method with arr, pivot + 1, right
                 if (pivot + 1 < right)
                 {
-                    QuickSort(arr, pivot + 1, right);
+                    t = new Thread(() => QuickSort(arr, pivot + 1, right));
+                    t.Start();
                 }
             }
             return arr;
