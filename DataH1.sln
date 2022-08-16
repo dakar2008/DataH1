@@ -38,7 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypeDesc", "DataTypeDes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickSort", "QuickSort\QuickSort.csproj", "{91F1938C-4F2F-4FD5-BE13-8D8BF4C14904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestQuickSort", "XUnitTestQuickSort\XUnitTestQuickSort.csproj", "{653ED217-0870-4988-90F6-C5C92E6AAE2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestQuickSort", "XUnitTestQuickSort\XUnitTestQuickSort.csproj", "{653ED217-0870-4988-90F6-C5C92E6AAE2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleAnalyzer", "ScheduleAnalyzer\ScheduleAnalyzer.csproj", "{9350790A-6FEB-4E12-93A0-DAAA6207B7A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{653ED217-0870-4988-90F6-C5C92E6AAE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653ED217-0870-4988-90F6-C5C92E6AAE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653ED217-0870-4988-90F6-C5C92E6AAE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9350790A-6FEB-4E12-93A0-DAAA6207B7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9350790A-6FEB-4E12-93A0-DAAA6207B7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9350790A-6FEB-4E12-93A0-DAAA6207B7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9350790A-6FEB-4E12-93A0-DAAA6207B7A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{CCCFAE4C-747B-4E4D-8077-34E2239E6505} = {5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}
 		{91F1938C-4F2F-4FD5-BE13-8D8BF4C14904} = {5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}
 		{653ED217-0870-4988-90F6-C5C92E6AAE2F} = {5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}
+		{9350790A-6FEB-4E12-93A0-DAAA6207B7A8} = {5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26BEC3EA-A069-473D-94AF-203CE2B9680A}
