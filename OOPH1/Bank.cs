@@ -32,50 +32,58 @@ namespace OOPH1
         /// </summary>
         /// <param name="type">Type of account action</param>
         /// <param name="amount">Amount to deposit / withdraw</param>
-        /// <param name="cprNumber">Social Security Number</param>
+        /// <param name="customerId">Id of customer</param>
         /// <param name="accountNumber">Accountnumber for the account to peform action</param>
         public void PerformAction(ActionType type, decimal amount, int customerId, int accountNumber)
         {
-            Customer? customer = this.Customers.FirstOrDefault(x => x.Id == customerId);
-            if(customer != null)
+            Customer? customer;
+            if(this.Customers != null)
             {
-                Account? account = customer.Person.Accounts.FirstOrDefault(x => x.AccountNumber == accountNumber);
-                if (account != null)
+                customer = this.Customers.FirstOrDefault(x => x.Id == customerId);
+                if (customer != null)
                 {
-                    Action action = new Action();
-                    action.Amount = amount;
-
-                    if (type == ActionType.Withdraw)
+                    Account account = customer.Person.Accounts.FirstOrDefault(x => x.AccountNumber == accountNumber);
+                    if (account != null)
                     {
-                        if (account.Balance > amount)
-                        {
-                            account.Balance -= amount;
-                            action.Type = ActionType.Withdraw;
+                        Action action = new Action();
+                        action.Amount = amount;
 
-                            Console.WriteLine($"{amount} withdraw from {account.Name}");
+                        if (type == ActionType.Withdraw)
+                        {
+                            if (account.Balance > amount)
+                            {
+                                account.Balance -= amount;
+                                action.Type = ActionType.Withdraw;
+
+                                Console.WriteLine($"{amount} withdraw from {account.Name}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Insufficient Founds!");
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("Insufficient Founds!");
+                            account.Balance += amount;
+                            action.Type = ActionType.Deposit;
+
+                            Console.WriteLine($"{amount} depost to {account.Name}");
                         }
+                        account.Actions.Add(action);
                     }
                     else
                     {
-                        account.Balance += amount;
-                        action.Type = ActionType.Deposit;
-
-                        Console.WriteLine($"{amount} depost to {account.Name}");
+                        Console.WriteLine($"Could not find account with id: {accountNumber}");
                     }
-                    account.Actions.Add(action);
                 }
                 else
                 {
-                    Console.WriteLine($"Could not find account with id: {accountNumber}");
+                    Console.WriteLine($"Could not find a customer with social security number: {customerId}");
                 }
             }
             else
             {
-                Console.WriteLine($"Could not find a customer with social security number: {customerId}");
+                Console.WriteLine($"{Name} has no customers");
             }
         }
     }

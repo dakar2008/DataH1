@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ScheduleAnalyzer.Models;
 using System.Diagnostics;
 
 namespace ScheduleAnalyzer.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class HomeController : BaseController<HomeController>
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -14,11 +16,6 @@ namespace ScheduleAnalyzer.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

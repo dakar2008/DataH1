@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ScheduleAnalyzer.Data;
+using ScheduleAnalyzer.Models;
 
 namespace ScheduleAnalyzer
 {
@@ -18,7 +19,7 @@ namespace ScheduleAnalyzer
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             var app = builder.Build();
 
@@ -46,7 +47,7 @@ namespace ScheduleAnalyzer
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
-
+            
             app.Run();
         }
     }

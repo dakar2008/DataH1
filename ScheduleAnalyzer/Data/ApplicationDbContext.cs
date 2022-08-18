@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ScheduleAnalyzer.Models;
 
 namespace ScheduleAnalyzer.Data
 {
@@ -9,5 +10,6 @@ namespace ScheduleAnalyzer.Data
             : base(options)
         {
         }
+        public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }

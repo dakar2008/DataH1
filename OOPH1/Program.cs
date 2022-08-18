@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Bank bank = new Bank();
+            bank.Name = "My Bank";
+            if(bank == null)
+            {
+                Console.WriteLine("Bank Can't Be Empty");
+            }
+            else
+            {
+                bank.PerformAction(ActionType.Deposit, 12000, 12331, 1232131);
+            }
         }
     }
 }
