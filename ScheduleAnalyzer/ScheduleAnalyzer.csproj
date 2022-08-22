@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilities\**" />
+    <Content Remove="Utilities\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
 
@@ -55,10 +62,6 @@
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>
