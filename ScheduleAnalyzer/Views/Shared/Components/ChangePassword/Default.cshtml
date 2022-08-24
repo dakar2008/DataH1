@@ -1,0 +1,63 @@
+﻿@model ChangePassViewModel
+@if (Model.User.UserMustChangePassword)
+{
+    <div class="modal modal-dark fade" id="CPModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="CPModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="change-password-form" method="post" action="@Url.Action("ChangePassword", "Home")" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h5 class="modal-title noselect" id="CPModalLabel">Skift Adgangskode</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="noselect">Da det er første gang du logger ind, skal du skifte din adgangskode.</p>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-12">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            @Html.LabelFor(m => m.OldPassword)
+                                        </div>
+                                        <div class="col">
+                                            @Html.PasswordFor(m => m.OldPassword)
+                                        </div>
+                                        @Html.ValidationMessageFor(m => m.OldPassword)
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            @Html.LabelFor(m => m.NewPassword)
+                                        </div>
+                                        <div class="col">
+                                            @Html.PasswordFor(m => m.NewPassword)
+                                        </div>
+                                        @Html.ValidationMessageFor(m => m.NewPassword)
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col">
+                                            @Html.LabelFor(m => m.ConfirmPassword)
+                                        </div>
+                                        <div class="col">
+                                            @Html.PasswordFor(m => m.ConfirmPassword)
+                                        </div>
+                                        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-block btn-success">Skift</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/cp_script.js" asp-append-version="true"></script>
+    <script src="~/Identity/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

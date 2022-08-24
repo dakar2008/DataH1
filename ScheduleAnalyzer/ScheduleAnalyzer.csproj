@@ -62,6 +62,10 @@
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\sweetalert\dist\sweetalert2.all.js" />
+    <None Include="wwwroot\lib\sweetalert\dist\sweetalert2.all.min.js" />
+    <None Include="wwwroot\lib\sweetalert\dist\sweetalert2.js" />
+    <None Include="wwwroot\lib\sweetalert\dist\sweetalert2.min.js" />
   </ItemGroup>
 
 </Project>

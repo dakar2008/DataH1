@@ -1,1 +1,23 @@
-﻿
+﻿.noselect {
+  user-select: none !important;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.field-validation-error {
+  color: #ff0000;
+}
+
+.modal-dark .modal-content .modal-header {
+  background: #253544 !important;
+}
+.modal-dark .modal-content .modal-header .modal-title {
+  color: #FFF;
+}
+.modal-dark .modal-content .modal-footer {
+  background: #253544 !important;
+  color: #FFF;
+}

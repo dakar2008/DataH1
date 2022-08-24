@@ -1,1 +1,11 @@
-﻿
+﻿.noselect{
+    user-select: none !important;
+}
+.btn-block{
+    width: 100%;
+    display: block;
+}
+
+.field-validation-error{
+    color: #ff0000;
+}

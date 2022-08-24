@@ -6,5 +6,9 @@
   {
     "outputFile": "wwwroot/css/MainCSS/Main.css",
     "inputFile": "wwwroot/css/MainCSS/Main.scss"
+  },
+  {
+    "outputFile": "wwwroot/js/CP_Script.es5.js",
+    "inputFile": "wwwroot/js/CP_Script.js"
   }
 ]

@@ -1,7 +1,7 @@
 ﻿@page
 @model LoginModel
 @{
-    ViewData["Title"] = "Schedule Analyzer";
+    ViewData["Title"] = "Skema Optælling";
     Layout = "_Layout_Login";
 }
 <div id="loginframe">
@@ -11,13 +11,13 @@
             <section>
                 <form id="account" method="post">
                     <div class="form-floating mb-4">
-                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" autofocus />
-                        <label asp-for="Input.Email" class="form-label textboxlabel noselect"></label>
+                        <input asp-for="Input.Email" class="form-control" autofocus />
+                        <label asp-for="Input.Email" class="textboxlabel noselect"></label>
                         <span asp-validation-for="Input.Email" class="text-warning noselect"></span>
                     </div>
                     <div class="form-floating mb-1">
-                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                        <label asp-for="Input.Password" class="form-label textboxlabel noselect"></label>
+                        <input asp-for="Input.Password" class="form-control" />
+                        <label asp-for="Input.Password" class="textboxlabel noselect"></label>
                         <span asp-validation-for="Input.Password" class="text-warning noselect"></span>
                     </div>
                     <div>

@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - ScheduleAnalyzer</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="~/lib/bootstrap_theme/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/sweetalert/dist/sweetalert2.min.css" rel="stylesheet" />
     <link href="~/css/maincss/main.min.css" rel="stylesheet" asp-append-version="true" />
 </head>
 <body>
@@ -20,6 +21,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("ChangePassword")
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
