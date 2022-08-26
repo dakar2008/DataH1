@@ -22,7 +22,8 @@
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true,
       "useSSL": false,
-      "authenticationMode": "None"
+      "authenticationMode": "None",
+      "DockerfileRunArguments": "--network=dakar-bridge"
     }
   },
   "iisSettings": {

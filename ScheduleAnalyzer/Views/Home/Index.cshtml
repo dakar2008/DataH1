@@ -2,3 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 <p>Test</p>
+@section Scripts{
+    <script src="~/lib/sweetalert/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var confirm = '@TempData["PasswordChanged"]';
+            if(confirm.length > 0)
+            {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Adgangskode er blevet ændret!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        });
+    </script>
+}

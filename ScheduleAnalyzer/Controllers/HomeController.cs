@@ -39,6 +39,7 @@ namespace ScheduleAnalyzer.Controllers
                 var dbUser = Db.ApplicationUsers.Find(user.Id);
                 dbUser.UserMustChangePassword = false;
                 await Db.SaveChangesAsync();
+                TempData["PasswordChanged"] = "True";
                 return RedirectToAction("Index", "Home");
             }
             else

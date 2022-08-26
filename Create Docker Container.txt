@@ -1,0 +1,1 @@
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Dakar1326" --name "MSSQL" -e "MSSQL_PID=Developer" -p 1433:1433 --net dakar-bridge -v MSSQLData:/var/opt/mssql -d --restart unless-stopped mcr.microsoft.com/mssql/server:2019-latest

@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Daniel", "Daniel", "{5AE2659E-BFCF-40B3-98C6-6F6CC2BF9CA2}"
 	ProjectSection(SolutionItems) = preProject
 		Branch_Exercise_5_Daniel.txt = Branch_Exercise_5_Daniel.txt
+		Create Docker Container.txt = Create Docker Container.txt
 		Documentation_Exercise_1_Daniel.txt = Documentation_Exercise_1_Daniel.txt
 	EndProjectSection
 EndProject
@@ -40,9 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickSort", "QuickSort\Quic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestQuickSort", "XUnitTestQuickSort\XUnitTestQuickSort.csproj", "{653ED217-0870-4988-90F6-C5C92E6AAE2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleAnalyzer", "ScheduleAnalyzer\ScheduleAnalyzer.csproj", "{4C97136E-F0E0-43AB-8D2B-75DB2B10B9B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleAnalyzer", "ScheduleAnalyzer\ScheduleAnalyzer.csproj", "{4C97136E-F0E0-43AB-8D2B-75DB2B10B9B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPH1", "OOPH1\OOPH1.csproj", "{86072611-ABD9-456A-94A7-E5FB0F17E181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPH1", "OOPH1\OOPH1.csproj", "{86072611-ABD9-456A-94A7-E5FB0F17E181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

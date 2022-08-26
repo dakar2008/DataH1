@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  scheduleanalyzer:
+    image: ${DOCKER_REGISTRY-}scheduleanalyzer
+    build:
+      context: .
+      dockerfile: ScheduleAnalyzer/Dockerfile
